@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendors/all.min.css">
+    <link rel="stylesheet" href="assets/css/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container">
         <header class="greating">
             <h1 class="title">
-                What's Up <input type="text" id="name" placeholder="Your name here">!
+                What's Up <input type="text" id="name" placeholder="Your name here" autocomplete="off">!
             </h1>
         </header>
         <div class="task-title">
@@ -39,7 +39,24 @@
             <ul class="todo-list"></ul>
         </div>
     </div>
+    <footer>
+        <div class="copyright text-center p-3" id="copyRight">
+            <script>
+                var date = new Date();
+                var year = date.getFullYear();
+                console.log(year);
+                document.getElementById('copyRight').innerHTML =
+                `
+                <p> Copyright &copy; ${year} All Rights Reserved By
+                <a href="https://www.facebook.com/mhegazy33" target="https://www.facebook.com/mhegazy33" class="copyright__color">Mohamed Hegazy</a>
 
+                </p>
+
+
+                `
+            </script>
+        </div>
+    </footer>
 
 
 
@@ -53,8 +70,8 @@
 
 
 
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendors/all.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

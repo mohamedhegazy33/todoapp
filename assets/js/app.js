@@ -25,7 +25,7 @@ function addtodo (el){
     console.log(todoInput.value);
     // prvent refreshing
     el.preventDefault();
-    var todos;
+    var todos = [];
     if(localStorage.todos != null){
     todos = JSON.parse(localStorage.getItem('todos'));
     console.log(todos);

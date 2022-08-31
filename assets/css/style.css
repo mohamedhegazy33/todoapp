@@ -146,6 +146,9 @@ select{
 .hide{
     display: none !important;
 }
+.copyright__color{
+    color: #fff;
+}
 
 @media(max-width: 767px){
     form{
@@ -153,14 +156,67 @@ select{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: 27px;
     }
-    .todo-button{
+    .todo-button {
         display: block !important;
+        width: 85%;
     }
-    .greating h1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .greating h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+    }
+    form input , form button{
+        border: none;
+        padding: 5px;
+        outline: none;
+    
+    }
+    select{
+        appearance: none;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        width: 12rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    form input, form button {
+        border: none;
+        padding: 5px;
+        outline: none;
+        width: 85%;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+    form button{
+        background-color: #004e92;
+        color: #fff;
+    }
+    body{
+        background: #000428;
+        overflow-x: hidden;
+    }
+    .task-title{
+        width: 107%;
+        text-align: center;
+        margin-left: 13px;
+        font-size: 20px;
+    }
+    .text-center {
+        text-align: center!important;
+        margin-left: 28px;
+    }    
+    form button:hover{
+        color: #004e92;
+        background: #FFF;
+    }
+    .copyright__color{
+        color: #fff;
+        font-size: 15px;
     }
 }
