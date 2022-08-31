@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="greating">
+            <h1 class="title">
+                What's Up <input type="text" id="name" placeholder="Your name here">!
+            </h1>
+        </header>
+        <div class="task-title">
+        <h4>What do you have planned ?</h4>
+        </div>
+        <div class="alert text-center alert-danger hide" role="alert" id="alertMessage">
+           Please Enter Your New Task!
+          </div>
+        <form>
+            <input type="text" class="todo-input" placeholder="Enter your Task .." >
+            <button class="todo-button" type="submit">
+                <i class="fa-solid fa-square-plus"></i>
+            </button>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg, #000428 , #004e92);
+    color: #fff;
+    min-height: 100vh;
+}
+header{
+    font-size: 25px ;
+}
+header h1 input{
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background:transparent !important;
+    cursor: initial;
+    font-size: 35px;
+    text-align: center;
+    left: 0;
+}
+header h1 input:not([type="radio"]):not([type="checkbox"])::placeholder{
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: initial;
+    font-size: 30px;
+    padding: 5px;
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+header , form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+ .task-title{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+form input , form button{
+    padding: 8px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+
+}
+form button {
+    color: #004e92;
+    background: #fff;
+    cursor: pointer;
+}
+form button:hover{
+    color: #fff;
+    background: #004e92;
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-list{
+    list-style: none;
+    min-width: 70%;
+}
+.todo{
+    margin: 16px;
+    background: #fff;
+    color: #000;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+.todo li {
+    flex: 1;
+}
+.checked-btn , .removed-btn{
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+.checked-btn{
+    background: rgb(23, 223, 23);
+}
+.todo-item{
+    padding: 0 0.5rem;
+}
+.fa-check , .fa-trash{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.drop{
+    transform: translateY(130px) rotateZ(20deg);
+    opacity: 0;
+}
+
+.select{
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    appearance: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    width: 12rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    background: #004e92;
+    color: #fff;
+    padding: 1.3rem;
+    pointer-events: none;
+    position: absolute;
+    top: -7px;
+    right: 0;
+    transition: all 0.5s ease;
+}
+.select:hover::after{
+    background: #fff;
+    color: #004e92;
+}
+.hide{
+    display: none !important;
+}
+
+@media(max-width: 767px){
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .todo-button{
+        display: block !important;
+    }
+    .greating h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
