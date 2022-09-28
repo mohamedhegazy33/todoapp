@@ -1,125 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(120deg, #000428 , #004e92);
-    color: #fff;
-    min-height: 100vh;
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(120deg, #000428, #004e92);
+  color: #fff;
+  min-height: 100vh;
 }
-header{
-    font-size: 25px ;
+header {
+  font-size: 25px;
 }
-header h1 input{
-    appearance: none;
-    outline: none;
-    border: none;
-    color: #fff;
-    background:transparent !important;
-    cursor: initial;
-    font-size: 35px;
-    text-align: center;
-    left: 0;
+header h1 input {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: transparent !important;
+  cursor: initial;
+  font-size: 35px;
+  text-align: center;
+  left: 0;
 }
-header h1 input:not([type="radio"]):not([type="checkbox"])::placeholder{
-    appearance: none;
-    outline: none;
-    border: none;
-    background: none;
-    color: #fff;
-    cursor: initial;
-    font-size: 30px;
-    padding: 5px;
-    margin-left: 15px;
-    text-transform: capitalize;
+header h1 input:not([type="radio"]):not([type="checkbox"])::placeholder {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: initial;
+  font-size: 30px;
+  padding: 5px;
+  margin-left: 15px;
+  text-transform: capitalize;
 }
-header , form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 20vh;
+header,
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
 }
- .task-title{
-    text-align: center;
-    margin-top: 15px;
-    font-size: 30px;
-}
-
-form input , form button{
-    padding: 8px;
-    font-size: 25px;
-    border: none;
-    outline: none;
-    padding: 0.6rem;
-
-}
-form button {
-    color: #004e92;
-    background: #fff;
-    cursor: pointer;
-}
-form button:hover{
-    color: #fff;
-    background: #004e92;
+.task-title {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 30px;
 }
 
-.todo-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.input__task-form input,
+.input__task-form button {
+  padding: 8px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  padding: 0.6rem;
 }
-.todo-list{
-    list-style: none;
-    min-width: 70%;
+.input__task-form button {
+  color: #004e92;
+  background: #fff;
+  cursor: pointer;
 }
-.todo{
-    margin: 16px;
-    background: #fff;
-    color: #000;
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.5s ease;
+form button:hover {
+  color: #fff;
+  background: #004e92;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-list {
+  list-style: none;
+  min-width: 70%;
+}
+.todo {
+  margin: 16px;
+  background: #fff;
+  color: #000;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
 }
 .todo li {
-    flex: 1;
+  flex: 1;
 }
-.checked-btn , .removed-btn{
-    background: red;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 16px;
+.checked-btn,
+.removed-btn {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 16px;
 }
-.checked-btn{
-    background: rgb(23, 223, 23);
+.clear-all-todo {
+  width: 16%;
+  padding: 0.5rem;
+  appearance: none;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  background: red;
+  color: #fff;
 }
-.todo-item{
-    padding: 0 0.5rem;
+.checked-btn {
+  background: rgb(23, 223, 23);
 }
-.fa-check , .fa-trash{
-    pointer-events: none;
+.todo-item {
+  padding: 0 0.5rem;
 }
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
+.fa-check,
+.fa-trash {
+  pointer-events: none;
 }
-.drop{
-    transform: translateY(130px) rotateZ(20deg);
-    opacity: 0;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.drop {
+  transform: translateY(130px) rotateZ(20deg);
+  opacity: 0;
 }
 
-.select{
-    margin: 0.5rem;
-    position: relative;
-    overflow: hidden;
+.select {
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
-select{
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  width: 12rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  background: #004e92;
+  color: #fff;
+  padding: 1.3rem;
+  pointer-events: none;
+  position: absolute;
+  top: -7px;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.select:hover::after {
+  background: #fff;
+  color: #004e92;
+}
+.hide {
+  display: none !important;
+}
+.copyright__color {
+  color: #fff;
+}
+.input-fliter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input__filter-form input {
+  width: 90%;
+  padding: 0.5rem;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.input__filter-form button {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 27px;
+  }
+  .todo-button {
+    display: block !important;
+    width: 85%;
+  }
+  .greating h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+  }
+  form input,
+  form button {
+    border: none;
+    padding: 5px;
+    outline: none;
+  }
+  select {
     appearance: none;
     outline: none;
     border: none;
@@ -127,96 +215,40 @@ select{
     width: 12rem;
     cursor: pointer;
     padding: 1rem;
-}
-.select::after{
-    content: "\25BC";
-    background: #004e92;
+  }
+  form input,
+  form button {
+    border: none;
+    padding: 5px;
+    outline: none;
+    width: 85%;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  form button {
+    background-color: #004e92;
     color: #fff;
-    padding: 1.3rem;
-    pointer-events: none;
-    position: absolute;
-    top: -7px;
-    right: 0;
-    transition: all 0.5s ease;
-}
-.select:hover::after{
-    background: #fff;
+  }
+  body {
+    background: #000428;
+    overflow-x: hidden;
+  }
+  .task-title {
+    width: 107%;
+    text-align: center;
+    margin-left: 13px;
+    font-size: 20px;
+  }
+  .text-center {
+    text-align: center !important;
+    margin-left: 28px;
+  }
+  form button:hover {
     color: #004e92;
-}
-.hide{
-    display: none !important;
-}
-.copyright__color{
+    background: #fff;
+  }
+  .copyright__color {
     color: #fff;
-}
-
-@media(max-width: 767px){
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-left: 27px;
-    }
-    .todo-button {
-        display: block !important;
-        width: 85%;
-    }
-    .greating h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 14px;
-    }
-    form input , form button{
-        border: none;
-        padding: 5px;
-        outline: none;
-    
-    }
-    select{
-        appearance: none;
-        outline: none;
-        border: none;
-        box-shadow: none;
-        width: 12rem;
-        cursor: pointer;
-        padding: 1rem;
-    }
-    form input, form button {
-        border: none;
-        padding: 5px;
-        outline: none;
-        width: 85%;
-        margin-bottom: 5px;
-        font-size: 20px;
-    }
-    form button{
-        background-color: #004e92;
-        color: #fff;
-    }
-    body{
-        background: #000428;
-        overflow-x: hidden;
-    }
-    .task-title{
-        width: 107%;
-        text-align: center;
-        margin-left: 13px;
-        font-size: 20px;
-    }
-    .text-center {
-        text-align: center!important;
-        margin-left: 28px;
-    }    
-    form button:hover{
-        color: #004e92;
-        background: #FFF;
-    }
-    .copyright__color{
-        color: #fff;
-        font-size: 15px;
-    }
+    font-size: 15px;
+  }
 }

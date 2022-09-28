@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="assets/css/vendors/all.min.css">
-    <link rel="stylesheet" href="assets/css/vendors/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/vendors/all.min.css" />
+    <link rel="stylesheet" href="assets/css/vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <header class="greating">
-            <h1 class="title">
-                What's Up <input type="text" id="name" placeholder="Your name here" autocomplete="off">!
-            </h1>
-        </header>
-        <div class="task-title">
+      <header class="greating">
+        <h1 class="title">
+          What's Up
+          <input
+            type="text"
+            id="name"
+            placeholder="Your name here"
+            autocomplete="off"
+          />!
+        </h1>
+      </header>
+      <div class="task-title">
         <h4>What do you have planned ?</h4>
+      </div>
+      <div
+        class="alert text-center alert-danger hide"
+        role="alert"
+        id="alertMessage"
+      >
+        Please Enter Your New Task!
+      </div>
+      <form class="input__task-form">
+        <input
+          type="text"
+          class="todo-input"
+          placeholder="Enter your Task .."
+        />
+        <button class="todo-button" type="submit">
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
         </div>
-        <div class="alert text-center alert-danger hide" role="alert" id="alertMessage">
-           Please Enter Your New Task!
-          </div>
-        <form>
-            <input type="text" class="todo-input" placeholder="Enter your Task .." >
-            <button class="todo-button" type="submit">
-                <i class="fa-solid fa-square-plus"></i>
-            </button>
-            <div class="select">
-                <select name="todos" class="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
-            </div>
+      </form>
+      <div class="input-fliter">
+        <form class="input__filter-form">
+          <input
+            type="text"
+            class="inputFliter"
+            placeholder="Search in Yor Tasks"
+          />
+          <button type="submit" class="FilterBtn">
+            <i class="fa-solid fa-search"></i>
+          </button>
         </form>
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
-        </div>
+
+        <button class="clear-all-todo">Clear Tasks</button>
+      </div>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
     </div>
     <footer>
-        <div class="copyright text-center p-3" id="copyRight">
-            <script>
-                var date = new Date();
-                var year = date.getFullYear();
-                console.log(year);
-                document.getElementById('copyRight').innerHTML =
-                `
+      <div class="copyright text-center p-3" id="copyRight">
+        <script>
+          var date = new Date();
+          var year = date.getFullYear();
+          console.log(year);
+          document.getElementById("copyRight").innerHTML = `
                 <p> Copyright &copy; ${year} All Rights Reserved By
                 <a href="https://www.facebook.com/mhegazy33" target="https://www.facebook.com/mhegazy33" class="copyright__color">Mohamed Hegazy</a>
 
                 </p>
 
 
-                `
-            </script>
-        </div>
+                `;
+        </script>
+      </div>
     </footer>
-
-
-
-
-
-
-
-          
-
-
-
-
 
     <script src="assets/js/vendors/all.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
-</body>
+  </body>
 </html>
